@@ -1,7 +1,9 @@
+#!/bin/bash
 #include <stdio.h>
-/*now I am going to create a main function */
-int main(void)
+
+/* this is my first time creating a comment*/
+int main()
 {
-	printf("Programming is like building a multilingual puzzle \n");
-	return (0);
+	puts("Programming is like building a multilingual puzzle \n");
+	return(0);
 }
