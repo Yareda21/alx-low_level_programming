@@ -5,7 +5,7 @@
 *
 *Return:return 0
 */
-int main() 
+void main(void) 
 {
     _putchar("_putchar \n");
 
