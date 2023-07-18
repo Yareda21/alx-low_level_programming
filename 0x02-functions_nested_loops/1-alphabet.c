@@ -1,19 +1,19 @@
 #include "main.h"
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
+  * print_alphabet - repeats the print_alphabet 10 times.
+  * Return: Nothing.
+  */
+void print_alphabet(void)
 {
+	int i;
+	char c;
 
-    char alphabet = 'a';
-    while (alphabet <= 'z')
-    {
-        putchar(alphabet);
-        alphabet++;
-    }
-
-    putchar('\n');
-    return (0);
+	for (i = 0; i < 10; ++i)
+	{
+		for (c = 'a'; c <= 'z'; c++)
+		{
+			_putchar(c);
+		}
+		_putchar('\n');
+	}
 }
