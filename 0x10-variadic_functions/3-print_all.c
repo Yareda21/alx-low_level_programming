@@ -5,11 +5,12 @@
 /**
  * print_all - prints anything
  * @format - shows the type of arguments in the functions
+ *
  */
 void print_all(const char * const format, ...)
 {
 	int i = 0;
-	char *strg; 
+	char *strg;
 	char *separ = "";
 
 	va_list list;
@@ -49,4 +50,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(list);
 }
-
