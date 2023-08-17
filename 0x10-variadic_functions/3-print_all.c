@@ -4,14 +4,12 @@
 
 /**
  * print_all - prints anything
- * @format - shows the type of arguments in the functions
- *
+ * @format: list of types of arguments passed to the function
  */
 void print_all(const char * const format, ...)
 {
 	int i = 0;
-	char *strg;
-	char *separ = "";
+	char *str, *sep = "";
 
 	va_list list;
 
@@ -24,25 +22,25 @@ void print_all(const char * const format, ...)
 			switch (format[i])
 			{
 				case 'c':
-					printf("%s%c", separ, va_arg(list, int));
+					printf("%s%c", sep, va_arg(list, int));
 					break;
 				case 'i':
-					printf("%s%d", separ, va_arg(list, int));
+					printf("%s%d", sep, va_arg(list, int));
 					break;
 				case 'f':
-					printf("%s%f", separ, va_arg(list, double));
+					printf("%s%f", sep, va_arg(list, double));
 					break;
 				case 's':
-					strg = va_arg(list, char *);
-					if (!strg)
-						strg = "(nil)";
-					printf("%s%s", separ, strg);
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
 					break;
 				default:
 					i++;
 					continue;
 			}
-			separ = ", ";
+			sep = ", ";
 			i++;
 		}
 	}
@@ -50,3 +48,4 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(list);
 }
+
